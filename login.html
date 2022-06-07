@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movitec Perú</title>
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/encabezados.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="https://kit.fontawesome.com/4df43fd2be.js" crossorigin="anonymous"></script>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" crossorigin="crossorigin" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="./img/logo2.png" alt="" class="logo">
+            </div>
+            <input type="checkbox" name="" id="check">
+            <label for="check" class="bar-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="nav-menu">
+                <li><a class="active" href="index.html">Inicio</a></li>
+                <li><a class="active"  href="planes.html">Planes</a></li>
+                <li><a class="active"  href="acerca_de_nosotros.html">Acerca de Nosotros</a></li>
+                <li><a class="active"  href="contacto.html">Contacto</a></li>
+                <li><a class="active"  href="login.html">Login</a></li>
+
+            </ul>
+        </nav>         
+         
+
+    </header><!--Header-->
+    <main class="contenedor">
+        <input type="checkbox"  id="flip">
+         <div class="cover">
+            <div class="front">
+                <img src="img/login.jpg" alt="">
+            </div>
+            <div class="back">
+                <img class="backImg" src="img/backimagen.jpg" alt="">
+            </div>
+         </div>
+         
+        <form action="#">
+            <div class="form-content">
+                <div class="login-form">
+                    <div class="title">Inicio de Sesión</div>
+                    <div class="input-boxes">
+                        <div class="input-box">                        
+                            <input type="email" placeholder="Ingresa tu correo">
+                        </div>
+                        <div class="input-box">                        
+                            <input type="password" placeholder="Ingresa tu clave">
+                        </div>
+                        <div class="text">
+                            <a href="#">Olvidaste tu clave?</a>
+                        </div>
+    
+                        <div class="button input-box">                        
+                            <input type="submit" value="Iniciar">
+                        </div>
+                        <div class="text text-login">No tienes cuenta? <label for="flip">Registrate ahora</label></div>
+                    </div>
+                </div>
+                
+    
+                <div class="signup-form">
+                    <div class="title">Registro</div>
+                    <div class="input-boxes">
+                        <div class="input-box">                        
+                            <input type="text" placeholder="Ingresa tu Nombre">
+                        </div>
+                        <div class="input-box">                        
+                            <input type="email" placeholder="Ingresa tu correo">
+                        </div>
+                        <div class="input-box">                        
+                            <input type="password" placeholder="Ingresa tu clave">
+                        </div>
+                        <div class="button input-box">                        
+                            <input type="submit" value="Registrar">
+                        </div>
+                        <div class="text text-sign">Ya tienes cuenta? <label for="flip">Inicia Sesión ahora</label></div>
+    
+                    </div>
+    
+                </div>
+            </div>
+        </form>
+        
+
+    </main>
+    
+    
+</body>
+<footer>
+    
+    <ul class="social_icon">
+        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        
+        
+
+    </ul>
+    <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="planes.html">Planes</a></li>
+        <li><a href="acerca_de_nosotros.html">Acerca de Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html">Login</a></li>        
+
+    </ul>
+    <p>&#169 2022 MovitecPerú | Todos los derechos Reservados</p>
+
+</footer>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</html>

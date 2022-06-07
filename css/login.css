@@ -1,0 +1,229 @@
+:root{
+    
+    --primario: rgb(0, 102, 255);
+    --secundario: deepskyblue;
+    --tercero: rgb(20, 50, 182);
+
+}
+
+
+/*CSS RESET*/
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /**1rem = 10px**/
+}
+
+*,*::before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: "Montserrat", sans-serif ;
+    font-size: 1.6rem;
+    line-height: 2;
+    background-color: rgba(245, 239, 239, 0.308);    
+    
+}
+.contenedor{
+    
+    position: relative;
+    max-width: 85rem;
+    width: 90%;     
+    background-color: white;  
+    padding: 4rem 3rem;
+    margin-top: 8rem;
+    box-shadow:  0 5px 10px rgba(0, 0, 0, 0.5);
+    perspective: 2700px;
+    border-radius: 1rem;
+}
+
+.contenedor .cover{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width:50%;    
+    z-index: 98;
+    transition: all 1s ease;
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+
+.contenedor .cover::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background:white ;
+    opacity: 0.2;
+    z-index: 100;
+}
+.contenedor .cover::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background:white ;
+    opacity: 0.2;
+    z-index: 100;
+    transform: rotateY(-180deg);
+}
+.contenedor #flip:checked ~ .cover{
+    transform: rotateY(-180deg);
+    
+}
+
+.contenedor .cover img{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index:12;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+}
+.contenedor .cover .back .backImg{
+    transform: rotateY(180deg);
+}
+
+.contenedor .form-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.contenedor form{
+    height: 100%;
+    width: 100%;   
+    
+}
+
+.form-content .login-form,
+.form-content .signup-form{
+
+    width: calc(100% / 2 - 25px);
+}
+
+form .form-content .title{
+    position: relative;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #333;
+}
+form .form-content .title:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 25px;
+    background: var(--primario)
+
+}
+
+form .signup-form .form-content .title:before{
+    width: 2rem;
+}
+
+form .form-content .input-boxes{
+    margin-top: 3rem;
+}
+
+form .form-content .input-box{
+    display: flex;
+    align-items: center;
+    height: 5rem ;
+    width: 100%;
+    margin: 1rem 0;
+    position: relative;
+}
+
+form .form-content .text{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #333;
+}
+
+form .form-content .text a{
+    color: var(--tercero);
+}
+form .form-content .text a:hover{
+    text-decoration: underline;
+}
+
+.form-content .input-box input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.form-content .input-box input:focus{
+    border-color: var(--primario);
+}
+
+form .form-content .button{
+    margin-top: 4rem;
+}
+
+
+form .form-content .button input{
+    color: white;
+    background: var(--primario);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+form .form-content .button input:hover{
+    background-color: rgb(7, 72, 192);
+}
+
+form .form-content label{
+    color: var(--tercero);
+    cursor: pointer;
+}
+
+form .form-content label:hover{
+    text-decoration: underline;
+}
+.contenedor #flip{
+    display: none;
+}
+
+@media(max-width:768px){
+    .contenedor .cover{
+        display: none;
+    }
+    .form-content .login-form,
+    .form-content .signup-form{
+
+    width: 100%;
+    }
+    .form-content .signup-form{
+        display: none;
+    }
+    .contenedor #flip:checked ~ form .signup-form{
+        display: block;
+    }
+    .contenedor #flip:checked ~ form .login-form{
+        display:none;
+    }
+
+
+}
+

@@ -1,0 +1,62 @@
+:root{
+    
+    --primario: rgb(0, 102, 255);
+    --secundario: deepskyblue;
+    --tercero: rgb(20, 50, 182);
+
+}
+.contenedor h1{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+@media(min-width:768px){
+    .main{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
+    }
+
+    .nosotros{
+        width: 100%;            
+        display: flexbox;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .mision{
+        width: 100%;
+        margin-top: -5rem;
+           
+    }
+}
+
+.nosotros{
+    text-align: center;
+    padding-bottom: 5rem;
+    margin: 5rem 0;
+    color: white;  
+
+    
+    
+}
+
+.mision{
+    width: 100%;
+    height: 19rem;
+    padding-bottom: 5rem;
+    background-color: var(--primario);
+    border-radius: 2rem;
+}
+.mision h2, .vision h2{
+    padding-top: 2rem;
+}
+
+.vision{
+    width: 100%;
+    height: 20rem;
+    margin-top: 5rem;
+    background-color: var(--secundario);
+    border-radius: 2rem;
+
+}
